@@ -51,7 +51,7 @@ def getgenes(genelist):
     return list(genes)
 
 def get_pdb(gene):
-    uniprot = pd.read_table("./data/uniprot_mapping.tsv")
+    uniprot = pd.read_table('./data/uniprot_map.tsv')
     reg = gene + "$"
     df = uniprot[uniprot["g_name"].str.contains(reg,regex=True, na=False)]
     if df.empty:
@@ -64,5 +64,5 @@ def get_pdb(gene):
 
 # if __name__=='__main__':
 #   get_pdb(
-#     gene = 'IRAK3'
+#     gene = 'CHEK2'
 #   )

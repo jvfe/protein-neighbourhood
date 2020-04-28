@@ -25,14 +25,14 @@ def getgenes():
 
     else:
         g = request.form.get('g')
-        query = request.url
-        query = query.replace("http://localhost:5000/query?gene=", "").upper()
+        query = str(request.url).upper()
+        query = query.replace("HTTP://LOCALHOST:5000/QUERY?GENE=", "")
         try:
-            pdb = ids_functions.get_pdb(g)
+            pdb = ids_functions.get_pdb(str(g))
             return render_template("genes.html", querygene = query, genes=genes,pdb=pdb)
         except:
             failure = g
-            return render_template("genes.html", gene= query, genes=genes,failure=failure)
+            return render_template("genes.html", querygene= query, genes=genes,failure=failure)
 
 if __name__ == '__main__':
     app.run()

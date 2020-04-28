@@ -6,7 +6,7 @@
   <form method="POST">
     <div class="btn-group container" role="group" aria-label="Basic example">
   {% for g in genes %}
-      <input class = 'btn btn-primary' role="button" aria-pressed="true" name='g' type="submit" value="{{ g }}">
+      <input class = 'btn btn-primary' aria-pressed="true" name='g' type="submit" value="{{ g }}">
   {% endfor %}
     </div>
   {%- if pdb -%}
