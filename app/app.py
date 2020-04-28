@@ -35,4 +35,4 @@ def getgenes():
             return render_template("genes.html", gene= query, genes=genes,failure=failure)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
