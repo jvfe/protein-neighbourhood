@@ -1,7 +1,5 @@
 # Protein Neighbourhood 
 
-_______________________
-
 **Protein Neighbourhood** is a silly little webpage I built as a study on Flask and Jinja2 templating. The original idea was a pun on "Customers who buy X also buy Y" but for protein interactions! 
 
 **[Check it out on Glitch](https://jvfe-protein-neighbourhood.glitch.me/)**
